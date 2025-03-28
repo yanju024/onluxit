@@ -1,0 +1,21 @@
+$primary-color: #4facfe;
+$secondary-color: #267074;
+$input-border: #ccc;
+$text-color: #999;
+
+.get-started-btn {
+  background: $secondary-color;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+  &:hover {
+    background: lighten($secondary-color, 10%);
+  }
+}
+
+

@@ -1,0 +1,96 @@
+// Login.scss
+$primary-color: #4facfe;
+$secondary-color: #00f2fe;
+$input-border: #ccc;
+$text-color: #999;
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+}
+
+.input-group {
+  position: relative;
+  margin: 20px 0;
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid $input-border;
+    border-radius: 5px;
+    outline: none;
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    color: $text-color;
+  }
+  input:focus + label,
+  input:valid + label {
+    top: 5px;
+    font-size: 12px;
+    color: $primary-color;
+  }
+}
+
+.btn, .social-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  background: $primary-color;
+  color: white;
+  &:hover {
+    background: lighten($primary-color, 10%);
+  }
+}
+
+.social-btn {
+  background: white;
+  color: #444;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  img {
+    width: 16px;
+    height: 16px;
+  }
+  &:hover {
+    background: #f1f1f1;
+  }
+}
+
+.google-btn {
+  border-color: #db4437;
+  color: #db4437;
+}
+
+.linkedin-btn {
+  border-color: #0077b5;
+  color: #0077b5;
+}
