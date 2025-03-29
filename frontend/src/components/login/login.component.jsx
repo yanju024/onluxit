@@ -1,9 +1,10 @@
 import SignIn from "./signin"
+import './login.styles.scss'
 
 const Login = (props) => {
 
     return (
-    <div className="mt-20 align-center text-center">
+    <div className="login mt-20 align-center text-center">
         {props.isLoggedIn}
        
         <SignIn></SignIn>

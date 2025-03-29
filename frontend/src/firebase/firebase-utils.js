@@ -5,9 +5,9 @@ import 'firebase/compat/firestore';
 
 const config = {
     apiKey: "AIzaSyDy716QStsMe_SsqzB1fHQrdrUgoiDrrR0",
-    authDomain: "crwn-clothing-3656c.firebaseapp.com",
-    projectId: "crwn-clothing-3656c",
-    storageBucket: "crwn-clothing-3656c.firebasestorage.app",
+    authDomain: "OnLuxit-clothing-3656c.firebaseapp.com",
+    projectId: "OnLuxit-clothing-3656c",
+    storageBucket: "OnLuxit-clothing-3656c.firebasestorage.app",
     messagingSenderId: "617030052845",
     appId: "1:617030052845:web:ea9fd6021afb0e0cdb55e4",
     measurementId: "G-27S496J3Y7"
@@ -45,7 +45,7 @@ export const createUserProfile = async (userAuth, additionalData) => {
 
     const userSnapshot = await userRef.get()
 
-    if(!userSnapshot.exits) {
+    if(!userSnapshot.exists) {
         const { displayName , email} = userAuth;
         const createdAt = new Date()
 
