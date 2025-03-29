@@ -1,7 +1,8 @@
 import { auth } from '../firebase/firebase-utils';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-const Header = ({ currentUser, isLoggedIn }) => {
+const Header = ({ currentUser }) => {
     return (
         <div class="bg-white">
             <div class="border py-3 px-6">
@@ -85,4 +86,8 @@ const Header = ({ currentUser, isLoggedIn }) => {
     )
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+    currentUser: state.user.currentUser
+})
+
+export default connect(mapStateToProps)(Header);
